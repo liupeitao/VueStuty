@@ -1,0 +1,16 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            // "type": "chrome",
+            "runtimeExecutable": "/usr/bin/google-chrome-beta",
+            "request": "launch",
+            "name": "debug",
+            // "file": "/home/liupeitao/gitHubProjects/VueStuty/src/vue_basic/08_计算属性/3.姓名案例_计算属性实现.html"
+            "file": "${file}"
+        }
+    ]
+}

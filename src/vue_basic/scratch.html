@@ -1,0 +1,59 @@
+<!--
+ * @Author: PTliu sudolovelnpctly6869@outlook.com
+ * @Date: 2023-03-23 19:58:07
+ * @LastEditors: PTliu sudolovelnpctly6869@outlook.com
+ * @LastEditTime: 2023-03-28 22:42:35
+ * @FilePath: /VueStuty/src/vue_basic/scratch.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本列表</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>array</h2>
+        <ul >
+            <li v-for="(stu, index) in students" :key="index">{{index}} : {{stu.name}} </li>
+        </ul>
+
+        <h2>object</h2>  
+        <ul >
+            <li v-for="(value) of student" :key="key">{{value}}</li>
+        </ul>
+
+        <h2>string</h2>
+        <ul>
+            <li v-for="(char,index) in student.name" :key="index">{{index}}:{{char}}</li>
+        </ul>
+        
+        <h2>specific times</h2>
+        <ul>
+            <li v-for="(val, index) in 6" :key="index"> {{val}}</li>
+        </ul>
+    </div>
+</body>
+    <script>
+        let vm = new Vue({
+            el:"#root",
+            data:{
+                students:[
+                    {id:"100", name:"张三", age:"19"},
+                    {id:"101", name:"李四", age:"20"},
+                    {id:"102", name:'王五', age:"21"}
+                    
+                ],
+                student:{
+                    id:"1942151321",
+                    name:"liupeitao",
+                    age:"24",
+                }
+            }
+        })
+    </script>
+</html>

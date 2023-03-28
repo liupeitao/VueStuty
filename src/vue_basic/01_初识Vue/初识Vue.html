@@ -1,3 +1,11 @@
+<!--
+ * @Author: PTliu sudolovelnpctly6869@outlook.com
+ * @Date: 2023-03-23 17:53:42
+ * @LastEditors: PTliu sudolovelnpctly6869@outlook.com
+ * @LastEditTime: 2023-03-23 18:57:58
+ * @FilePath: /VueStuty/src/vue_basic/01_初识Vue/初识Vue.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <!DOCTYPE html>
 <html>
 	<head>
@@ -28,12 +36,12 @@
 									(1). if(){}
 									(2). for(){}
 		-->
-
+		
 		<!-- 准备好一个容器 -->
 		<div id="demo">
-			<h1>Hello，{{name.toUpperCase()}}，{{address}}</h1>
+			<h1 >Hello，{{name.toUpperCase()}}，i know you college website  is {{address}} </h1>
 		</div>
-
+<!-- 
 		<script type="text/javascript" >
 			Vue.config.productionTip = false //阻止 vue 在启动时生成生产提示。
 
@@ -46,6 +54,20 @@
 				}
 			})
 
+		</script> -->
+
+		<script type="text/javascript">
+			Vue.config.productionTip =  false //
+			new Vue({
+				el: '#demo',
+				data(){
+					return{
+						name: 'liupeitao ',
+						address: 'ahxh.edu.cn'
+					}
+				}
+			})
 		</script>
+		
 	</body>
 </html>
