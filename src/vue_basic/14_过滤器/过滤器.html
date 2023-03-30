@@ -52,19 +52,22 @@
 		})
 		
 		
-		new Vue({
+	 let vm =	new Vue({
 			el:'#root',
 			data:{
 				time:1621561377603, //时间戳
 				msg:'你好，尚硅谷'
 			},
+			//可以证明， 等数据改变时候。 依赖这个数据的元素就会被更新
 			computed: {
 				fmtTime(){
+					console.log("我是计算属性")
 					return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
 				}
 			},
 			methods: {
 				getFmtTime(){
+					console.log("我是方法属性")
 					return dayjs(this.time).format('YYYY年MM月DD日 HH:mm:ss')
 				}
 			},

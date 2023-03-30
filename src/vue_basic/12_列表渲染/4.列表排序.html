@@ -19,12 +19,15 @@
 					<input type="text">
 				</li>
 			</ul>
+			<div>test function will be invoke when sorttype changed in computed <br>
+				{{depsortType}}
+			</div>
 		</div>
 
 		<script type="text/javascript">
 			Vue.config.productionTip = false
 			
-			new Vue({
+			let vm = new Vue({
 				el:'#root',
 				data:{
 					keyWord:'',
@@ -48,6 +51,15 @@
 							})
 						}
 						return arr
+					},
+					// It prove that all function will be invoked when its depend on data changed ;
+					depsortType(){
+						if(this.sortType){
+							console.log(this.sortType)
+							return this.sortType;
+						}else{
+							return 0;
+						}
 					}
 				}
 			}) 
